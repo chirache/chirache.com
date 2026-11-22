@@ -1,0 +1,25 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "files.associations": {
+        "*.html": "tera-html",
+        "*.css": "tailwindcss"
+    },
+
+    "tailwindCSS.includeLanguages": {
+        "tera-html": "html"
+    },
+
+    "emmet.includeLanguages": {
+        "tera-html": "html"
+    },
+
+    "[tera-html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[tailwindcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

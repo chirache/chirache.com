@@ -1,17 +1,13 @@
-base_url = "https://chirache.fr"
+base_url = "https://chirache.com"
 
 [markdown.highlighting]
 error_on_missing_language = true
 theme = "github-dark"
 
 [extra]
+source = "https://github.com/chirache/chirache.com"
+github = "https://github.com/chirache"
+linkedin = "https://www.linkedin.com/in/chirache/"
 cispa_url = "https://cispa.de/"
 uds_url = "https://www.uni-saarland.de/"
 quach_url = "https://wquach.github.io/"
-source = "https://github.com/gllmc/chirache.fr"
-github = "https://github.com/gllmc"
-linkedin = "https://www.linkedin.com/in/chirache/"
-email_format = "[first]@[last].fr"
-git_ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG6QOEfGMhBBkilzbO5MfCObLreLdqXp78pQZ3MNFZQs"
-git_ssh_fingerprint = "SHA256:CdcD1TagSBG/l1N6BpnimZStnKLqxx/cBSIrExMcAZ0"
-git_ssh_created_in = "September 2023"

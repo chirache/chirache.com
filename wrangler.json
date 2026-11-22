@@ -1,0 +1,11 @@
+{
+    "name": "chirache",
+    "compatibility_date": "2026-11-22",
+    "build": {
+        "command": "bash ./build.sh"
+    },
+    "assets": {
+        "directory": "./public",
+        "not_found_handling": "404-page"
+    }
+}

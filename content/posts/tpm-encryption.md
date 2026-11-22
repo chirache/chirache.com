@@ -3,7 +3,7 @@ title = "TPM-based disk encryption"
 date = 2025-10-07
 +++
 
-_Disclaimer: I am no longer using or maintaining this setup, so it is likely that some of this information is outdated. Note that the [Arch Linux wiki](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Enrolling_the_TPM) suggests an alternative solution. They bind the TPM key to PCR 15 with a zero value instead of a signing policy on PCR 11. Provided the UKI always extends PCR 15 before mounting a root filesystem, this should achieve equivalent security. I still find the measured-boot setup more elegant though!_
+_Disclaimer (November 2026): I am no longer using or maintaining this setup, so it is likely that some of this information is outdated. Note that the [Arch Linux wiki](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Enrolling_the_TPM) suggests an alternative solution. They bind the TPM key to PCR 15 with a zero value instead of a signing policy on PCR 11. Provided the UKI always extends PCR 15 before mounting a root filesystem, this should achieve equivalent security. I still find the measured-boot setup more elegant though!_
 
 Nowadays, disk encryption is a must-have feature for devices, especially those susceptible to be carried around, like laptops. On macOS and Windows computers, it is now almost always enabled by default, using secure hardware (Secure Enclave or Trusted Platform Module) to store the encryption keys.
 

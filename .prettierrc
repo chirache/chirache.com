@@ -1,4 +1,14 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "tabWidth": 4
+    "plugins": ["prettier-plugin-jinja-template", "prettier-plugin-tailwindcss"],
+    "tailwindStylesheet": "theme/input.css",
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "parser": "jinja-template"
+            }
+        }
+    ],
+    "printWidth": 100,
+    "tabWidth": 4
 }

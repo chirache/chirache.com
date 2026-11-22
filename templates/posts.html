@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ section.title }}</h1>
+    <h1 class="font-mono">{{ section.title }}</h1>
 
     <p>I have created this section so I can write about interesting things from time to time.</p>
 
@@ -13,7 +13,7 @@
         {% for page in section.pages %}
             <li>
                 <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-                ({{ page.date }})
+                ({{ page.date | date(format="%-d %b %Y") }})
             </li>
         {% else %}
             <li>Soon!</li>

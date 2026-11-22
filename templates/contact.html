@@ -1,24 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>
-        Contact
-    </h1>
+    <h1 class="font-mono">Contact</h1>
 
     <p>
-        You are welcome to contact me at <code>{{ config.extra.email_format }}</code>.
+        {% set email = get_env(name="CONTACT_EMAIL", default="") %}
+        {% if email %}
+            You are welcome to contact me at
+            <a href="mailto:{{ email }}">{{ email }}</a>.
+        {% else %}
+            No contact email address set.
+        {% endif %}
     </p>
-
-    <p>
-        All my Git contributions from {{ config.extra.git_ssh_created_in }} onwards are signed with the following Ed25519 SSH key:
-    </p>
-
-    <ul>
-        <li>
-            Public key: <code class="break-all">{{ config.extra.git_ssh_public_key }}</code>
-        </li>
-        <li>
-            Fingerprint: <code class="break-all">{{ config.extra.git_ssh_fingerprint }}</code>
-        </li>
-    </ul>
 {% endblock %}
