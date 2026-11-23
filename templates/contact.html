@@ -7,7 +7,15 @@
         {% set email = get_env(name="CONTACT_EMAIL", default="") %}
         {% if email %}
             You are welcome to contact me at
-            <a href="mailto:{{ email }}">{{ email }}</a>.
+            <a id="contact-email" data-email="{{ email | base64_encode }}" href="#">[loading]</a>.
+            <script>
+                {
+                    const contactEmailLink = document.getElementById("contact-email");
+                    const decoded = atob(contactEmailLink.dataset.email);
+                    contactEmailLink.href = `mailto:${decoded}`;
+                    contactEmailLink.textContent = decoded;
+                }
+            </script>
         {% else %}
             No contact email address set.
         {% endif %}
